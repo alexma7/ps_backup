@@ -1,118 +1,117 @@
 {
-  //Для копирования папок	
-    "path_to_backup_dir": "D:/other/backup/",
-
-    "name_dir": [
-        "X7" // 1
-
-        // Сохранения     ,"" // 1
-        ,"DS3" // 1
-        ,"sekiro" // 2
-        ,"no_man_sky" //3
-        ,"hitman" // 4
-        ,"FF_XV" // 5
-        ,"Witcher3" // 6
-        ,"CAPCOM_res_dmc" // 7
-        ,"Rockstar" // 8
-        ,"cemu_save" // 9
-        ,"DS1r" // 10
-        ,"Carrion" // 11
-        ,"Hollow Knight" // 12
-        ,"Subnautica" // 13
-        ,"Steam" // 14
-        ,"uplay_emu" // 15
-        ,"Elden Ring" // 16
-        // ,"" // 17
-
-        
-    ],
-
-    // Что копировать
-    "source": [
-         "C:/Users/alexm/Documents/X7" // 1
-
-        // Сохранения      ,"" // 6
-        ,"C:/Users/alexm/AppData/Roaming/DarkSoulsIII" // 1
-        ,"C:/Users/alexm/AppData/Roaming/Sekiro" // 2
-        ,"C:/Users/alexm/AppData/Roaming/HelloGames" // 3
-        ,"C:/Users/alexm/AppData/Roaming/IO Interactive" // 4
-        ,"C:/Users/alexm/Documents/My Games/FINAL FANTASY XV" // 5
-        ,"C:/Users/alexm/Documents/The Witcher 3" // 6
-        ,"C:/Users/alexm/Documents/CAPCOM" // 7
-        ,"C:/Users/alexm/Documents/Rockstar Games" // 8
-        ,"D:/Games/nintendo/CEMU_MLC/usr/save" // 9
-        ,"C:/Users/alexm/Documents/NBGI/DARK SOULS REMASTERED" // 10
-        ,"C:/Users/alexm/AppData/LocalLow/Phobia/Carrion" // 11
-        ,"C:/Users/alexm/AppData/LocalLow/Team Cherry" // 12
-        ,"C:/Users/alexm/AppData/LocalLow/Unknown Worlds/Subnautica/Subnautica/SavedGames" // 13
-        ,"C:/Users/Public/Documents/Steam" // 14 много игра и лицухи и пиратки: DMC5, Subnautica, FF15
-        ,"C:/Users/alexm/AppData/Roaming/uplay_emu" // 15
-        ,"C:/Users/alexm/AppData/Roaming/EldenRing" // 16
-        // ,"" // 6
-        
-        
-
-    ],
-
-    "destination": [
-         "D:/other/backup/dir/other/x7" // 1 
-         
-        // Сохранения 
-        ,"D:/other/backup/dir/save/DS3" // 1
-        ,"D:/other/backup/dir/save/Sekiro" // 2
-        ,"D:/other/backup/dir/save/NMS" // 3
-        ,"D:/other/backup/dir/save/hitman1" // 4
-        ,"D:/other/backup/dir/save/FF_XV" // 5
-        ,"D:/other/backup/dir/save/Witcher3" // 6
-        ,"D:/other/backup/dir/save/CAPCOM_res_dmc" // 7
-        ,"D:/other/backup/dir/save/Rockstar" // 8
-        ,"C:/other/backup/dir/save/cemu_save" // 9
-        ,"D:/other/backup/dir/save/DS1r" // 10
-        ,"D:/other/backup/dir/save/Carrion" // 11
-        ,"D:/other/backup/dir/save/Hollow Knight" // 12
-        ,"D:/other/backup/dir/save/Subnautica" // 13
-        ,"D:/other/backup/dir/save/Steam" // 14
-        ,"D:/other/backup/dir/save/uplay_emu" // 15  Odyssey
-        ,"D:/other/backup/dir/save/EldenRing" // 16  
-        
-    ],
-
-    //---------------------------
-    /* ДАННЫЕ ДЛЯ АРХИВИРОВАНИЯ*/
-    //---------------------------
-    "list_arc": [ //Список архивов, берется из массива робокопи destination
-         "C:/other/backup/dir/cemu_save" //1
-        ,"D:/other/backup/dir/" // 2
-    ],
-
-    "day_save_arc": [
-         "-14" // 1
-        ,"-14" // 2
-    ],
-
-    "name_arc_rus": [
-         "Сохранения CEMU" // 1
-        ,"Имя арзива test2" // 2
-    ],
-
-    // Имя архива
-    "name_arc": [
-         "cemu_save_"	 // 1
-        ,"tesе2_"	 // 2
-    ],
-
-    // Путь для хранения архивов
-    "destination_arc": [
-         "C:/other/backup/archives/"	 // 1
-        ,"D:/other/backup/archives/"	 // 2
-    ]
-
-    
-}
-
-
-
-
-
-
-
+    //Р”Р»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РїР°РїРѕРє	
+      "path_to_backup_dir": "D:/other/backup/",
+  
+      "name_dir": [
+          "X7" // 1
+  
+          // РЎРѕС…СЂР°РЅРµРЅРёСЏ     ,"" // 1
+          ,"DS3" // 1
+          ,"sekiro" // 2
+          ,"no_man_sky" //3
+          ,"hitman" // 4
+          ,"FF_XV" // 5
+          ,"Witcher3" // 6
+          ,"CAPCOM_res_dmc" // 7
+          ,"Rockstar" // 8
+          ,"cemu_save" // 9
+          ,"DS1r" // 10
+          ,"Carrion" // 11
+          ,"Hollow Knight" // 12
+          ,"Subnautica" // 13
+          ,"Steam" // 14
+          ,"uplay_emu" // 15
+          ,"Elden Ring" // 16
+          // ,"" // 17
+  
+          
+      ],
+  
+      // Р§С‚Рѕ РєРѕРїРёСЂРѕРІР°С‚СЊ
+      "source": [
+           "C:/Users/alexm/Documents/X7" // 1
+  
+          // РЎРѕС…СЂР°РЅРµРЅРёСЏ      ,"" // 6
+          ,"C:/Users/alexm/AppData/Roaming/DarkSoulsIII" // 1
+          ,"C:/Users/alexm/AppData/Roaming/Sekiro" // 2
+          ,"C:/Users/alexm/AppData/Roaming/HelloGames" // 3
+          ,"C:/Users/alexm/AppData/Roaming/IO Interactive" // 4
+          ,"C:/Users/alexm/Documents/My Games/FINAL FANTASY XV" // 5
+          ,"C:/Users/alexm/Documents/The Witcher 3" // 6
+          ,"C:/Users/alexm/Documents/CAPCOM" // 7
+          ,"C:/Users/alexm/Documents/Rockstar Games" // 8
+          ,"D:/Games/nintendo/CEMU_MLC/usr/save" // 9
+          ,"C:/Users/alexm/Documents/NBGI/DARK SOULS REMASTERED" // 10
+          ,"C:/Users/alexm/AppData/LocalLow/Phobia/Carrion" // 11
+          ,"C:/Users/alexm/AppData/LocalLow/Team Cherry" // 12
+          ,"C:/Users/alexm/AppData/LocalLow/Unknown Worlds/Subnautica/Subnautica/SavedGames" // 13
+          ,"C:/Users/Public/Documents/Steam" // 14 РјРЅРѕРіРѕ РёРіСЂР° Рё Р»РёС†СѓС…Рё Рё РїРёСЂР°С‚РєРё: DMC5, Subnautica, FF15
+          ,"C:/Users/alexm/AppData/Roaming/uplay_emu" // 15
+          ,"C:\\Users\\alexm\\AppData\\Roaming\\EldenRing" // 16
+          
+          
+  
+      ],
+  
+      "destination": [
+           "D:/other/backup/dir/other/x7" // 1 
+           
+          // РЎРѕС…СЂР°РЅРµРЅРёСЏ 
+          ,"D:/other/backup/dir/save/DS3" // 1
+          ,"D:/other/backup/dir/save/Sekiro" // 2
+          ,"D:/other/backup/dir/save/NMS" // 3
+          ,"D:/other/backup/dir/save/hitman1" // 4
+          ,"D:/other/backup/dir/save/FF_XV" // 5
+          ,"D:/other/backup/dir/save/Witcher3" // 6
+          ,"D:/other/backup/dir/save/CAPCOM_res_dmc" // 7
+          ,"D:/other/backup/dir/save/Rockstar" // 8
+          ,"C:/other/backup/dir/save/cemu_save" // 9
+          ,"D:/other/backup/dir/save/DS1r" // 10
+          ,"D:/other/backup/dir/save/Carrion" // 11
+          ,"D:/other/backup/dir/save/Hollow Knight" // 12
+          ,"D:/other/backup/dir/save/Subnautica" // 13
+          ,"D:/other/backup/dir/save/Steam" // 14
+          ,"D:/other/backup/dir/save/uplay_emu" // 15  Odyssey
+          ,"D:/other/backup/dir/save/EldenRing" // 15  Odyssey
+      ],
+  
+      //---------------------------
+      /* Р”РђРќРќР«Р• Р”Р›РЇ РђР РҐРР’РР РћР’РђРќРРЇ*/
+      //---------------------------
+      "list_arc": [ //РЎРїРёСЃРѕРє Р°СЂС…РёРІРѕРІ, Р±РµСЂРµС‚СЃСЏ РёР· РјР°СЃСЃРёРІР° СЂРѕР±РѕРєРѕРїРё destination
+           "C:/other/backup/dir/cemu_save" //1
+          ,"D:/other/backup/dir/" // 2
+      ],
+  
+      "day_save_arc": [
+           "-14" // 1
+          ,"-14" // 2
+      ],
+  
+      "name_arc_rus": [
+           "РЎРѕС…СЂР°РЅРµРЅРёСЏ CEMU" // 1
+          ,"РРјСЏ Р°СЂР·РёРІР° test2" // 2
+      ],
+  
+      // РРјСЏ Р°СЂС…РёРІР°
+      "name_arc": [
+           "cemu_save_"	 // 1
+          ,"tesРµ2_"	 // 2
+      ],
+  
+      // РџСѓС‚СЊ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Р°СЂС…РёРІРѕРІ
+      "destination_arc": [
+           "C:/other/backup/archives/"	 // 1
+          ,"D:/other/backup/archives/"	 // 2
+      ]
+  
+      
+  }
+  
+  
+  
+  
+  
+  
+  
+  

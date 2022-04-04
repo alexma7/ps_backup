@@ -251,13 +251,13 @@ $strLog = $splitter + "**********START "+$date+"**********"+$splitter #| Out-Fil
 [string]$sendMailText = "<center><h2> Отчет по копиям за "+$date + "</h1></center>"
 $sendMailText += "<center><table border='1'   cellspacing='0' cellpadding = '5' >
   <tr >
-	<td>Наименование</td>
-    <td>Путь из</td>
-    <td>Путь в</td>
-    <td>Дата начала</td>
-    <td>Сообщение</td>
-    <td>Статус</td>
-    <td>Дата окончания</td>
+	<td>Name</td>
+    <td>Path from</td>
+    <td>Path to</td>
+    <td>Date begin</td>
+    <td>Message</td>
+    <td>Status</td>
+    <td>Date end</td>
    </tr>"
 for ($i = 0; $i -lt $destination.length; $i++)
 { 
@@ -273,12 +273,12 @@ for ($i = 0; $i -lt $destination.length; $i++)
 		$strLog +=&'robocopy.exe' $CmdLine
 	}
 	Catch	{
-		$strLog +="Ошибка при запуске RoboCopy: "+$error[0].Exception
+		$strLog +="Error starting RoboCopy: "+$error[0].Exception
 	}
 
 	$tempVal = roboError
 	$sendMailText += $tempVal;
-	"Копирование завершено "+$name_dir[$i]+" - "+$tempVal
+	"Copy complete "+$name_dir[$i]+" - "+$tempVal
 }
 $sendMailText += "</table></center>"
 
@@ -286,14 +286,14 @@ $sendMailText += "</table></center>"
 #$sendMailText +="<br><br><br><center><h2> Отчет по архивам </h2></center>"
 $sendMailText += "<center><table border='1'   cellspacing='0' cellpadding = '5' >
   <tr >
-	<td>Наименование</td>
-    <td>Архивирование из</td>
-    <td>Архивирование в</td>
-    <td>Сообщение</td>
-    <td>Статус</td>
-    <td>Наименование</td>
-	<td>Сообщение</td>
-	<td>Статус</td>
+	<td>name</td>
+    <td>path from</td>
+    <td>arch to</td>
+    <td>message</td>
+    <td>Status</td>
+    <td>Name</td>
+	<td>Message</td>
+	<td>Status</td>
    </tr>"
 for ($i = 0; $i -lt $list_arc.length; $i++)
 {
@@ -305,20 +305,20 @@ for ($i = 0; $i -lt $list_arc.length; $i++)
 	$sendMailText += "<tr><td>"+$name_arc_rus[$i]+"</td><td>"+$list_arc[$i]+"</td><td>"+$fullDirArc+"</td>"
 	Try{
 		Compress-Archive -Path $list_arc[$i] -DestinationPath $fullDirArc -CompressionLevel Optimal -Force
-		$tempVal ="Архив успешно создан "+$fullDirArc;
+		$tempVal ="Archive created "+$fullDirArc;
 		$strLog +=$tempVal
 		$arcStatus = "<td><font size='3' color='green'>OK</font></td>"
 		}
 	Catch{
-		$tempVal ="Ошибка при Архивировании: "+$fullDirArc+ $error[0].Exception
+		$tempVal ="Error create archive: "+$fullDirArc+ $error[0].Exception
 		$strLog += $tempVal
 		$arcStatus = "<td><font size='3' color='red'>ERROR</font></td>"
 		}
 	$sendMailText += "<td>"+$tempVal+"</td>"+$arcStatus
-	"Архивирование завершено "+$name_arc_rus[$i]+" - "+$tempVal
+	"archiving completed "+$name_arc_rus[$i]+" - "+$tempVal
 	
 	#Удаляем архивы старее заданной даты
-	$sendMailText += "<td>Удаление архивов</td>"
+	$sendMailText += "<td>Delete archeves</td>"
 	#"Проверка архивов " + $dateDelArc 
 	
 	#Получаем текущую дату - количество дней указанных для хранения архивов
@@ -331,18 +331,18 @@ for ($i = 0; $i -lt $list_arc.length; $i++)
 	{
 		Try{
 			#$list_old_arc | Remove-Item
-			$tempVal = "Удалены архивы: "+$list_old_arc
+			$tempVal = "Delete archeves: "+$list_old_arc
 			$strLog += $tempVal;
 			$arcStatus = "<td><font size='3' color='green'>OK</font></td>"
 			}
 		Catch{
-			$tempVal ="Ошибка при удалении архивов: "+$error[0].Exception
+			$tempVal ="Error deleting archives: "+$error[0].Exception
 			$strLog +=$tempVal
 			$arcStatus = "<td><font size='3' color='red'>ERROR</font></td>"
 			}
 	}
 	else{
-		$tempVal ="Нет архивов для удаления: "+$error[0].Exception
+		$tempVal ="No archives for delete: "+$error[0].Exception
 		$strLog += $tempVal;
 		$arcStatus = "<td><font size='3' color='green'>OK</font></td>"
 		}
